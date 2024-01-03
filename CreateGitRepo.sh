@@ -7,9 +7,9 @@ cd C:/PATH/
 git init
 
 # 3) Configure your Git username and email (this is a one-time setup):
-git config --global user.name "username"
-git config --global user.email "email@email.com"
-git config --global push.default matching
+git config --global user.name "username" && \
+git config --global user.email "email@email.com" && \
+git config --global push.default matching && \
 git config --global alias.co checkout
 
 # 4) After initializing your repository, add files to it:
@@ -38,4 +38,6 @@ git push -u origin master
 git checkout -b new-branch-name
 
 # 11) If you want to update the master branch, use:
-git add . && git commit -m "Update" && git push origin master
+git add . && \
+git commit -m "Update" && \
+git push origin master

@@ -21,6 +21,6 @@ cat ~/.ssh/id_rsa.pub
 git remote set-url origin git@github.com:username/repositorySSHTok.git
 
 # 7) Now, you can push changes using SSH without being prompted to log in via a browser:
-git add .
-git commit -m "Update"
+git add . && \
+git commit -m "Update" && \
 git push origin master
