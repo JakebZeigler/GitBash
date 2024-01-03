@@ -1,1 +1,4 @@
 ignore.txt
+ignore.sh
+CreateGitRepoIgnore.sh
+UpdateGitRepoIgnore.sh
