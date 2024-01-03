@@ -1,0 +1,44 @@
+_______________________________________
+"HOW TO CREATE AND INIT NEW GIT REPO!"
+_______________________________________
+1) "Open Git Bash and navigate to your project directory:"
+Bash Code:
+$- cd C:/PATH/
+
+2) "Then, initialize the repository:"
+Bash Code:
+$- git init
+
+3) "Configure your Git username and email (this is a one-time setup):"
+Bash Code:
+$- git config --global user.name "username"
+git config --global user.email "email@email.com"
+git config --global push.default matching
+git config --global alias.co checkout
+
+4) "After initializing your repository, add files to it:"
+Bash Code:
+$- git add .
+
+5) "Commit the files that you've staged in your local repository:"
+Bash Code:
+$- git commit -m "Initial commit."
+
+6) "Create a New Repository on GitHub:"
+Go to GitHub.
+In the upper-right corner, next to your avatar or identicon, click the '+' sign and then select "New repository."
+Name your repository, add a description (optional), and choose to make the repository either public or private.
+Click "Create repository."
+
+7) "After creating the repository on GitHub, you will see instructions to link your local repository."
+Bash Code:
+$- git remote add origin https://github.com/username/new-repo.git
+"Replace https://github.com/username/new-repo.git with the URL provided by GitHub."
+
+8) "Push the changes in your local repository to GitHub:"
+Bash Code:
+$- git push -u origin master
+
+9) "If you want to create a new branch and switch to it, use:
+Bash Code:
+$- git checkout -b new-branch-name
