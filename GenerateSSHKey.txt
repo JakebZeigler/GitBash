@@ -1,42 +1,35 @@
-Here's how to set it up:
+_______________________________________
+"HOW TO GENERATE AN SSH KEY FOR GIT!"
+_______________________________________
+1) "Open Git Bash and enter the following command, replacing your_email@example.com with your email:"
+Bash Code:
+$- ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+"When prompted to "Enter a file in which to save the key," press Enter to accept the default file location."
 
-Generate an SSH Key (if you haven’t already):
-Open Git Bash and enter the following command, replacing your_email@example.com with your email:
+2) "Add Your SSH Key to the ssh-agent:"
+Bash Code:
+$- eval "$(ssh-agent -s)"
 
-bash
-Copy code
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-When prompted to "Enter a file in which to save the key," press Enter to accept the default file location.
+3) "Then, add your SSH private key to the ssh-agent:"
+Bash Code:
+$- ssh-add ~/.ssh/id_rsa
 
-Add Your SSH Key to the ssh-agent:
-First, start the ssh-agent:
+4) "Add Your SSH Public Key to Your GitHub Account:"
+Bash Code:
+$- Run cat ~/.ssh/id_rsa.pub
+"To display your SSH public key. Copy the SSH public key to your clipboard."
 
-bash
-Copy code
-eval "$(ssh-agent -s)"
-Then, add your SSH private key to the ssh-agent:
-
-bash
-Copy code
-ssh-add ~/.ssh/id_rsa
-Add Your SSH Public Key to Your GitHub Account:
-
-Run cat ~/.ssh/id_rsa.pub to display your SSH public key.
-Copy the SSH public key to your clipboard.
-On GitHub, go to "Settings" > "SSH and GPG keys."
+5) "On GitHub, go to "Settings" > "SSH and GPG keys.""
 Click on "New SSH key," paste your SSH key, and save it.
-Change Your Remote URL to SSH:
-Change the remote URL of your repository from HTTPS to SSH. Replace your-repository-url with your actual repository URL:
 
-bash
-Copy code
-git remote set-url origin git@github.com:username/repositorySSHTok.git
-Push Your Changes Using SSH:
-Now, you can push changes without being prompted to log in via a browser:
+6) "Change the remote URL of your repository from HTTPS to SSH."
+"Replace your-repository-url with your actual repository SSH:"
+Bash Code:
+$- git remote set-url origin git@github.com:username/repositorySSHTok.git
 
-bash
-Copy code
-git add .
+7) "Now, you can push changes using SSH without being prompted to log in via a browser:"
+Bash Code:
+$- git add .
 git commit -m "Update"
 git push origin master
-By using SSH, your Git operations authenticate using the SSH key instead of your username and password. This will enable you to push changes directly from Git Bash without needing to log in via a browser each time.
+
