@@ -32,13 +32,21 @@ Click "Create repository."
 
 7) "After creating the repository on GitHub, you will see instructions to link your local repository."
 Bash Code:
-$- git remote add origin https://github.com/username/new-repo.git
+$- git remote add origin https://github.com/username/GitBash.git
 "Replace https://github.com/username/new-repo.git with the URL provided by GitHub."
 
-8) "Push the changes in your local repository to GitHub:"
+8) "If you haven’t done so already, change the remote URL to include your correct GitHub username:"
+Bash Code:
+$- git remote set-url origin https://username@github.com/username/repositoryName.git
+
+9) "Push the changes in your local repository to GitHub:"
 Bash Code:
 $- git push -u origin master
 
-9) "If you want to create a new branch and switch to it, use:
+10) "If you want to create a new branch and switch to it, use:
 Bash Code:
 $- git checkout -b new-branch-name
+
+11) "If you want to update the master branch, use:
+Bash Code:
+$- git add . && git commit -m "Update" && git push origin master
