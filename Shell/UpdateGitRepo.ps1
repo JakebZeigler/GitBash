@@ -1,4 +1,4 @@
-# Load configurations from JSON file using a relative path.
+# Load configurations from JSON file using a relative path
 $config = Get-Content -Path "../config.json" | ConvertFrom-Json
 
 # Extract values from JSON configuration
@@ -12,5 +12,4 @@ $bashCommand = "-c 'cd $ignoreDirectory && ./UpdateGitRepoIgnore.sh && exec bash
 Start-Process -FilePath $gitBashPath -ArgumentList $bashCommand -Wait
 
 # Close the PowerShell window after the Git Bash script finishes
-Start-Process -FilePath $gitBashPath -ArgumentList $bashCommand -Wait
 exit
