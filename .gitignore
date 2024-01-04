@@ -1,4 +1,5 @@
 ignore/
+config.json
 bat/
 ignore.txt
 ignore.sh
