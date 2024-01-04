@@ -26,7 +26,7 @@ echo "Please enter your repository's SSH URL (e.g., git@github.com:username/repo
 read REPO_SSH_URL
 git remote set-url origin "$REPO_SSH_URL"
 
-# Git operations #
+# Git operations
 git add .
 git commit -m "Update"
 git push origin master
