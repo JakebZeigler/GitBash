@@ -1,4 +1,4 @@
-# Load configurations from JSON file using a relative path
+# Load configurations from JSON file using a relative path.
 $config = Get-Content -Path "../config.json" | ConvertFrom-Json
 
 # Extract values from JSON configuration
