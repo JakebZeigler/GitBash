@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Change this to your email
-YOUR_EMAIL="your_email@example.com"
+YOUR_EMAIL="email@email.com"
+
+# Change this to your specific directory
+TARGET_DIR="/c/PATH/"
 
 # Generating SSH Key
 echo "Generating SSH key..."
@@ -21,6 +24,10 @@ echo "Please copy the above SSH public key and add it to GitHub."
 # Wait for user confirmation after adding key to GitHub
 read -p "Press enter after you have added the SSH key to GitHub."
 
+# Changing to the target directory
+echo "Changing to the target directory: $TARGET_DIR"
+cd "$TARGET_DIR" || exit
+
 # Setting up repository SSH URL
 echo "Please enter your repository's SSH URL (e.g., git@github.com:username/repository.git):"
 read REPO_SSH_URL
@@ -32,3 +39,8 @@ git commit -m "Update"
 git push origin master
 
 echo "Repository updated and pushed via SSH."
+
+
+# Run the script by navigating to its directory and executing 
+# cd /c/path/
+# ./Auto_GenerateSSHKey.sh
