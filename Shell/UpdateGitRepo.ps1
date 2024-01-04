@@ -10,3 +10,7 @@ $bashCommand = "-c 'cd $ignoreDirectory && ./UpdateGitRepoIgnore.sh && exec bash
 
 # Run the Bash script using Git Bash and wait for it to finish
 Start-Process -FilePath $gitBashPath -ArgumentList $bashCommand -Wait
+
+# Close the PowerShell window after the Git Bash script finishes
+Start-Process -FilePath $gitBashPath -ArgumentList $bashCommand -Wait
+exit
