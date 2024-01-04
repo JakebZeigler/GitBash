@@ -1,4 +1,4 @@
-
+########### TEST
 # Script to update the master branch in a Git repository
 
 # Navigate to your project directory
